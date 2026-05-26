@@ -53,7 +53,7 @@ PATH, then use the Gradle wrapper (`./gradlew`) to build the project with the `a
 ```
 
 The task will create an APK file in the `/app/build/outputs/apk/debug` directory. This APK file uses a different app-id from our stable
-builds and can be manually installed to your device.
+builds and can be manually installed to your device!
 
 ## Branching
 
