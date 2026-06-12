@@ -17,7 +17,7 @@ defaultConfig {
     versionName = project.getVersionName()
     versionCode = getVersionCode(versionName!!)
     ndk {
-        abiFilters += listOf("arm64-v8a")
+        abiFilters += listOf("arm64-v8a", "armeabi-v7a")
     }
 }
 
