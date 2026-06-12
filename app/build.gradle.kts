@@ -9,15 +9,17 @@ android {
 	namespace = "org.jellyfin.androidtv"
 	compileSdk = libs.versions.android.compileSdk.get().toInt()
 
-	defaultConfig {
-		minSdk = libs.versions.android.minSdk.get().toInt()
-		targetSdk = libs.versions.android.targetSdk.get().toInt()
-
-		// Release version
-		applicationId = namespace
-		versionName = project.getVersionName()
-		versionCode = getVersionCode(versionName!!)
-	}
+defaultConfig {
+    minSdk = libs.versions.android.minSdk.get().toInt()
+    targetSdk = libs.versions.android.targetSdk.get().toInt()
+    // Release version
+    applicationId = namespace
+    versionName = project.getVersionName()
+    versionCode = getVersionCode(versionName!!)
+    ndk {
+        abiFilters += listOf("arm64-v8a")
+    }
+}
 
 	buildFeatures {
 		buildConfig = true
